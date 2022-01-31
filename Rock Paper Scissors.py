@@ -1,10 +1,14 @@
 import sys
+import random
+
+possible_moves=["rock","paper","scissor"]
 
 player1 = input("What is your name player 1? ")
-player2 = input("What is your name player 2? ")
-
+player2="computer"
 player1_move = input("player 1's move: ").lower()
-player2_move = input("player 2's move: ").lower()
+player2_move = random.choice(possible_moves)
+
+
 
 def game(move_1,move_2):
     
@@ -29,6 +33,7 @@ def game(move_1,move_2):
     else:
         return ("*warning* invalid input.It's a rock paper scissor game so enter either rock,paper or scissor ")
         
-        sys.exit()
+        
         
 print(game(player1_move,player2_move))
+
